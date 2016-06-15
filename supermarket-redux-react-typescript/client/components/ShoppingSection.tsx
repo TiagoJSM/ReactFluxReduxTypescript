@@ -9,10 +9,7 @@ import ShoppingCartListContainer from '../containers/ShoppingCartListContainer';
 import ProductListContainer from '../containers/ProductListContainer';
 
 interface ShoppingSectionProps {
-    categories: Category[];
-    products: Product[];
     categoryId: number;
-    shoppingCartProducts: ShoppingCartProduct[];
     actions: any;
 };
 

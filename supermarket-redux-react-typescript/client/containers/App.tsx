@@ -10,10 +10,7 @@ import { Product } from '../models/Product';
 import { ShoppingCartProduct } from '../models/ShoppingCartProduct';
 
 interface AppProps {
-    categories: Category[];
-    viewProducts: Product[];
     categoryId: number;
-    shoppingCartItems: ShoppingCartProduct[];
     dispatch: Dispatch;
 }
 
@@ -23,7 +20,7 @@ class App extends React.Component<AppProps, void> {
 
     }
     render() {
-        const { categories, viewProducts, categoryId, shoppingCartItems, dispatch } = this.props;
+        const { categoryId, dispatch } = this.props;
         const actions = bindActionCreators(ProductActions, dispatch);
 
         return (
@@ -31,10 +28,7 @@ class App extends React.Component<AppProps, void> {
                 <ShoppingHeader />
                 <div className="container">
                     <ShoppingSection 
-                        categories={categories} 
                         categoryId={categoryId} 
-                        products={viewProducts}
-                        shoppingCartProducts={shoppingCartItems}
                         actions={actions}/>
                 </div>
             </div>
@@ -43,10 +37,7 @@ class App extends React.Component<AppProps, void> {
 }
 
 const mapShoppingSectionStateToProps = state => ({
-    categories: state.categories,
-    products: state.products,
     categoryId: state.categoryId,
-    shoppingCartItems: state.shoppingCartItems,
 });
 
 export default connect(mapShoppingSectionStateToProps)(App);
