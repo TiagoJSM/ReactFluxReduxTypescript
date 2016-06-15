@@ -1,4 +1,4 @@
-import { bindActionCreators, Dispatch } from 'redux';
+import { bindActionCreators, IDispatch } from 'redux';
 import { connect } from 'react-redux';
 import * as React from 'react';
 
@@ -10,8 +10,8 @@ import { Product } from '../models/Product';
 import { ShoppingCartProduct } from '../models/ShoppingCartProduct';
 
 interface AppProps {
-    categoryId: number;
-    dispatch: Dispatch;
+    categoryId?: number;
+    dispatch?: IDispatch;
 }
 
 class App extends React.Component<AppProps, void> {
@@ -21,7 +21,7 @@ class App extends React.Component<AppProps, void> {
     }
     render() {
         const { categoryId, dispatch } = this.props;
-        const actions = bindActionCreators(ProductActions, dispatch);
+        const actions = bindActionCreators(ProductActions as any, dispatch);
 
         return (
             <div className="todoapp">

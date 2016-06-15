@@ -5,8 +5,8 @@ import { Product } from '../models/Product';
 import ProductItem from './ProductItem';
 
 interface ProductListProps {
-    products: Product[];
-    actions: any;
+    products?: Product[];
+    actions?: any;
 };
 
 class ProductList extends React.Component<ProductListProps, void> {

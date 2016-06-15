@@ -9,8 +9,8 @@ import ShoppingCartListContainer from '../containers/ShoppingCartListContainer';
 import ProductListContainer from '../containers/ProductListContainer';
 
 interface ShoppingSectionProps {
-    categoryId: number;
-    actions: any;
+    categoryId?: number;
+    actions?: any;
 };
 
 class ShoppingSection extends React.Component<ShoppingSectionProps, void> {

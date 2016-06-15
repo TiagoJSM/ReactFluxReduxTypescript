@@ -4,8 +4,8 @@ import { ShoppingCartProductView } from '../models/ShoppingCartProduct';
 import ShoppingCartListItem from './ShoppingCartListItem';
 
 interface ShoppingCartListProps {
-    products: ShoppingCartProductView[];
-    removeFromCart: Function;
+    products?: ShoppingCartProductView[];
+    removeFromCart?: Function;
 };
 
 interface ShoppingCartListState {

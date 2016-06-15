@@ -22,7 +22,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatcher => ({
-    actions: bindActionCreators(ProductActions, dispatcher)
+    actions: bindActionCreators(ProductActions as any, dispatcher)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductList);

@@ -9,7 +9,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack-production.config.js --progress --profile --colors",
     "build:dev": "node webpack/dev-server.js",
-	"start": "concurrently \"npm run build:dev\" \"node server/development\"",
+    "start": "concurrently \"npm run build:dev\" \"node server/development\"",
     "test": "tsc && mocha --require test-setup --recursive ./dist/**/__spec__/**/*-spec.js"
   },
   "author": "Jack Hsu <jack.hsu@gmail.com>",
@@ -20,14 +20,14 @@
     "express": "4.13.3",
     "extract-text-webpack-plugin": "0.9.1",
     "lodash": "3.10.1",
-    "react": "0.14.6",
-    "react-dom": "0.14.6",
-    "react-redux": "4.0.0",
+    "react": "15.1.0",
+    "react-dom": "15.1.0",
+    "react-redux": "4.4.5",
     "redux": "3.0.4",
     "redux-actions": "0.8.0",
     "serve-static": "1.10.0",
     "todomvc-app-css": "2.0.1",
-    "typescript": "1.7.5",
+    "typescript": "^1.8.10",
     "yargs": "3.29.0"
   },
   "devDependencies": {

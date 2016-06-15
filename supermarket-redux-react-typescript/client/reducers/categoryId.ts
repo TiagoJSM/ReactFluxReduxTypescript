@@ -9,8 +9,8 @@ CATEGORY_CHANGE
 
 const initialState = null;
 
-export default handleActions<number>({
-    [CATEGORY_CHANGE]: (state: number, action: Action): number => {
+export default handleActions<number, any>({
+    [CATEGORY_CHANGE]: (state: number, action: Action<any>): number => {
         if(!action.payload){
             return null;
         }

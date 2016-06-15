@@ -4,8 +4,8 @@ import { Category, CategoryView } from '../models/Category';
 import CategorySearchInput from './CategorySearchInput';
 
 interface CategoriesProps {
-  categories: CategoryView[];
-  actions: any;
+  categories?: CategoryView[];
+  actions?: any;
 };
 interface CategoriesState {
   filter: string;

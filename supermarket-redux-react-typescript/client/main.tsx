@@ -1,10 +1,10 @@
-/// <reference path='../typings/tsd.d.ts'/>
+/// <reference path='../typings/index.d.ts'/>
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import {
-  Store,
+  IStore,
   compose,
   createStore,
   bindActionCreators,
@@ -51,7 +51,7 @@ var initialState =
         shoppingCartItems: [],
     };
 
-const store: Store = createStore(shopping, initialState);
+const store: IStore<any> = createStore(shopping, initialState);
 
 ReactDOM.render(
   <Provider store={store}>

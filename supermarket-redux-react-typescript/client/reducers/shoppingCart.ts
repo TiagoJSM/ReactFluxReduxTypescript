@@ -19,8 +19,8 @@ ADD_PRODUCT
 
 const initialState = [];
 
-export default handleActions<ShoppingCartProduct[]>({
-    [ADD_ITEM_TO_CART]: (state: ShoppingCartProduct[], action: Action): ShoppingCartProduct[] => {
+export default handleActions<ShoppingCartProduct[], any>({
+    [ADD_ITEM_TO_CART]: (state: ShoppingCartProduct[], action: Action<any>): ShoppingCartProduct[] => {
         let element = state.find(p => p.productId == action.payload.productId);
         if(element != null){
             return <ShoppingCartProduct[]>state.map(p =>
@@ -35,10 +35,10 @@ export default handleActions<ShoppingCartProduct[]>({
                 quantity: action.payload.quantity
             });
     },
-    [REMOVE_ITEM_FROM_CART]: (state: ShoppingCartProduct[], action: Action): ShoppingCartProduct[] => {
+    [REMOVE_ITEM_FROM_CART]: (state: ShoppingCartProduct[], action: Action<any>): ShoppingCartProduct[] => {
         return state.filter(p => p.productId != action.payload.productId);
     },
-    [DELETE_PRODUCT]: (state: ShoppingCartProduct[], action: Action): ShoppingCartProduct[] => {
+    [DELETE_PRODUCT]: (state: ShoppingCartProduct[], action: Action<any>): ShoppingCartProduct[] => {
         return state.filter(p => p.productId != action.payload.productId);
     },
 }, initialState);

@@ -8,4 +8,4 @@ DELETE_PRODUCT,
 ADD_PRODUCT
 } from '../constants/ProductActionTypes';
 
-export default handleActions<Category[]>({ });
+export default handleActions<Category[], any>({ });
