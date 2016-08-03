@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "assertion-error": "registry:npm/assertion-error#1.0.0+20160422045008",
+    "flux": "registry:npm/flux#2.1.1+20160601175240",
+    "lodash": "registry:npm/lodash#4.0.0+20160723033700",
+    "react-redux": "registry:npm/react-redux#4.4.0+20160614222153",
+    "redux": "registry:npm/redux#3.0.6+20160214194820"
+  },
+  "globalDependencies": {
+    "classnames": "registry:dt/classnames#0.0.0+20160316155526",
+    "eventemitter3": "registry:dt/eventemitter3#1.1.1+20151208234524",
+    "mocha": "registry:dt/mocha#2.2.5+20160317120654",
+    "react": "registry:dt/react#0.14.0+20160423065914",
+    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
+    "redux-actions": "registry:dt/redux-actions#0.8.0+20160521154116",
+    "sugar": "registry:dt/sugar#0.0.0+20160509083218"
+  }
+}

@@ -1,5 +1,4 @@
 import * as React from "react";
-import * as $ from 'jquery';
 
 import ShoppingHeader from './components/ShoppingHeader';
 import ShoppingSection from './components/ShoppingSection';
@@ -8,11 +7,6 @@ import { Category } from './models/Category';
 import { Product } from './models/Product';
 import { ShoppingCartProduct } from './models/ShoppingCartProduct';
 import store from './Stores/SupermarketStore';
-import './css/bootstrap.min.css';
-
-(window as any).jQuery = (window as any).$ = $;
-import './js/bootstrap.min.js';
-
 
 interface AppState {
     categories: Category[];

@@ -1,29 +1,54 @@
-# typescript-webpack-react-flux-boilerplate
-This boilerplate combines:
-* [Typescript](https://github.com/Microsoft/TypeScript)
-* [Babel](https://babeljs.io/)
-* [React](https://github.com/facebook/react)
-* [Flux](https://github.com/facebook/flux)
-* [LESS](https://github.com/less/less.js)
-* [CSS modules](https://github.com/css-modules/css-modules)
-* [Webpack](https://github.com/webpack/webpack)
-* [Jasmine](https://github.com/jasmine/jasmine)
-* [Karma](https://github.com/karma-runner/karma)
+![https://travis-ci.org/jaysoo/todomvc-redux-react-typescript](https://api.travis-ci.org/jaysoo/todomvc-redux-react-typescript.svg)
 
-## Getting started
-* run **npm install** to download dependencies
-* run **npm start** to build and start webpack-dev-server
-* open **http://localhost:3333/**
+This is an implementation of [TodoMVC](http://todomvc.com/) built using:
 
-## Build options
-* **npm run build** for single build (creates files in build/ folder)
-* **npm run watch** for incremental builds on every file change
-* **npm start** to build and start webpack-dev-server
+- [React](http://facebook.github.io/react/) 0.14.6
+- [Redux](https://github.com/rackt/redux) 3.0.4
+- [TypeScript](http://www.typescriptlang.org/) 1.7.5
 
-## Tests
-* **npm test** - single run unit tests in PhantomJS
-* **npm run test-debug** - to run repeated unit tests in PhantomJS after every file change
-* **npm run test-browser**- single run unit tests in Chrome
-* **npm run test-browser-debug** - to run repeated unit tests after every file change in Chrome with debug option
-    * After browser is opened click on "DEBUG" button in top right corner
-    * Hit F12 to debug
+It is adapted from the [redux TodoMVC example](https://github.com/rackt/redux/tree/master/examples/todomvc).
+
+Read more about it in my blog post: http://jaysoo.ca/2015/09/26/typed-react-and-redux/
+
+## Getting Started
+
+Requirement:
+
+- NodeJS 4+
+
+Install dependencies:
+
+```
+npm install
+```
+## Running production server
+
+```
+npm start
+```
+
+Visit [http://localhost:8000/](http://localhost:8000/).
+
+**Note:** This will run the pre-built JavaScript files, if you want to play around with the source
+you need to run the development server with webpack dev server (See below).
+
+---
+
+## Running development server
+
+Run webpack dev server (for assets):
+
+```
+npm run start:dev
+```
+
+Visit [http://localhost:8000/](http://localhost:8000/).
+
+
+### Testing
+
+To run tests, use:
+
+```
+npm test
+```
